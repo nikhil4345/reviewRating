@@ -15,20 +15,30 @@ const companySchema = new mongoose.Schema({
         require : true
     },
    
-    founded :{
+    founded_on :{
         type: String,
         require : true
     },
+   
     userId: {
        type: mongoose.Schema.Types.ObjectId,
-       require: true,
+       require : true,
        ref: 'user'
+    },
+    company_logo :{
+        type: String,
+        require : true
     },
     isActive: {
         type: Boolean,
         default:true
     },
+    role:{
+        type:String,
+        default:"company"
+    }
+    
    
 })
-companySchema.set ("timetamps",true)
-module.exports = mongoose.model('company',companySchema)
+companySchema.set ("timestamps",true)
+module.exports = mongoose.model('company',companySchema);

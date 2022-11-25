@@ -1,27 +1,35 @@
-const  mongoose  = require('mongoose')
-const user = require("./user_schema")
+const mongoose = require('mongoose')
 
 const reviewSchema = new mongoose.Schema({
 
-    subject :{
+    subject: {
         type: String,
-        require : true
+        require: true
     },
-    review :{
-        type : String,
-        require : true,
-        default : false
+    review: {
+        type: String,
+        require: true,
     },
     rating: {
-        type : String,
-        require : true
+        type: String,
+        require: true
     },
- 
+      user_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        require: true,
+        ref: "users"
+    },
+    company_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        require: true,
+        ref:"companies"
+    },
+  
     isActive: {
         type: Boolean,
-        default:true
+        default: true
     }
-   
+
 })
-reviewSchema.set ("timetamps",true)
-module.exports = mongoose.model('review',reviewSchema)
+reviewSchema.set("timestamps", true)
+module.exports = mongoose.model('reviews', reviewSchema)

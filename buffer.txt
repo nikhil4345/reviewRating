@@ -1,0 +1,16 @@
+MongoDB logo
+MONGODB ATLAS
+MongoDB Atlas. Fully managed MongoDB in the cloud.
+Harness the power of your data by building and managing your data in the cloud.
+Start Free
+View pricing
+
+TRUSTED BY
+coinbase
+rent the runway
+ebay
+boxed
+forbes
+
+Built for the way you work with data
+MongoDB Atlas' document model enables developers to store data as JSON-like objects that resemble objects in application code. With MongoDB Atlas, use the tools and languages that you prefer. Manage your clusters with MongoDB CLI for Atlas, or IaC tools like Terraform or Cloudformation.

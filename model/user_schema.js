@@ -1,40 +1,43 @@
-const  mongoose  = require('mongoose')
+const mongoose = require('mongoose')
 const userSchema = new mongoose.Schema({
 
-    user :{
+    user: {
         type: String,
-        require : true
+        require: true
     },
-    phoneNumber :{
-        type : String,
-        require : true,
-        default : false
-    },
-    password :{
+    phoneNumber: {
         type: String,
-        require : true
+        require: true,
     },
-    email : {
-        type : String,
-        require : true
-    },
-    city:{
+    password: {
         type: String,
-        require : true
+        require: true
     },
-    state :{
+    email: {
         type: String,
-        require : true
+        require: true
+    },
+    city: {
+        type: String,
+        require: true
+    },
+    state: {
+        type: String,
+        require: true
+    },
+    userPic: {
+        type: String,
+        require: true
     },
     isActive: {
         type: Boolean,
-        default:true
+        default: true
     },
     role: {
         type: String,
-        default:"user"
+        default: "user"
     }
 
 })
-userSchema.set ("timetamps",true)
-module.exports = mongoose.model('user',userSchema)
+userSchema.set("timestamps", true)
+module.exports = mongoose.model('user', userSchema)
